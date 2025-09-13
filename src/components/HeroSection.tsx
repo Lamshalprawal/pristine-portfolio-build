@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import LetterGlitch from "./LetterGlitch";
+import GlassSurface from "./GlassSurface";
 
 const HeroSection = () => {
   const scrollToSection = (sectionId: string) => {
@@ -47,24 +48,28 @@ const HeroSection = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center px-4">
-            <Button
-              variant="hero"
-              size="lg"
-              onClick={() => scrollToSection("services")}
-              className="group w-full sm:w-auto min-h-[48px]"
-            >
-              Discover Our Services
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
+            <GlassSurface variant="capsule" className="w-full sm:w-auto">
+              <Button
+                variant="ghost"
+                size="lg"
+                onClick={() => scrollToSection("services")}
+                className="group w-full min-h-[48px] bg-transparent hover:bg-transparent text-white font-semibold"
+              >
+                Discover Our Services
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </GlassSurface>
             
-            <Button
-              variant="glass"
-              size="lg"
-              onClick={() => scrollToSection("contact")}
-              className="w-full sm:w-auto min-h-[48px]"
-            >
-              Get in Touch
-            </Button>
+            <GlassSurface variant="capsule" className="w-full sm:w-auto">
+              <Button
+                variant="ghost"
+                size="lg"
+                onClick={() => scrollToSection("contact")}
+                className="w-full min-h-[48px] bg-transparent hover:bg-transparent text-white font-semibold"
+              >
+                Get in Touch
+              </Button>
+            </GlassSurface>
           </div>
 
           <div className="mt-12 sm:mt-16 grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 md:gap-8 max-w-4xl mx-auto px-4">
@@ -73,13 +78,13 @@ const HeroSection = () => {
               { label: "Global Offices", value: "4+" },
               { label: "Team Experience", value: "12+ Years" }
             ].map((stat, index) => (
-              <div
+              <GlassSurface
                 key={stat.label}
-                className="relative group h-32 sm:h-36"
+                variant="capsule"
+                className="group h-32 sm:h-36 hover:scale-105 transition-all duration-300"
                 style={{ animationDelay: `${index * 0.2}s` }}
               >
-                <div className="absolute inset-0 primary-gradient rounded-2xl opacity-20 group-hover:opacity-30 transition-opacity duration-300"></div>
-                <div className="relative bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl p-6 hover:bg-white/15 hover:border-white/30 transition-all duration-300 hover:scale-105 hover:shadow-glow h-full flex flex-col justify-center items-center text-center">
+                <div className="h-full flex flex-col justify-center items-center text-center p-6">
                   <div className="text-3xl sm:text-4xl font-bold text-white mb-2 group-hover:text-primary-glow transition-colors duration-300">
                     {stat.value}
                   </div>
@@ -87,7 +92,7 @@ const HeroSection = () => {
                     {stat.label}
                   </div>
                 </div>
-              </div>
+              </GlassSurface>
             ))}
           </div>
         </div>

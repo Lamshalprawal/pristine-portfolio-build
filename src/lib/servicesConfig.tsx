@@ -43,32 +43,32 @@ export const mockServicesResponse: Service[] = [
     technologies: ["React", "Node.js", "PostgreSQL", "Chart.js"]
   },
   {
-    id: "accounting-services",
+    id: "accounting-portfolio",
     icon: <Calculator className="w-8 h-8" />,
-    title: "Accounting Services",
-    description: "Digital solutions for accounting and financial management with automated workflows and compliance.",
-    category: "Finance",
-    features: ["Automated bookkeeping", "Tax compliance", "Financial reporting", "Invoice management"],
-    pricing: {
-      starting: "800",
-      currency: "USD"
-    },
-    deliveryTime: "3-4 weeks",
-    technologies: ["React", "Express", "MongoDB", "Stripe API"]
-  },
-  {
-    id: "medical-services",
-    icon: <Heart className="w-8 h-8" />,
-    title: "Medical Services",
-    description: "Comprehensive software solutions for healthcare providers and medical practices with HIPAA compliance.",
-    category: "Healthcare",
-    features: ["Patient management", "HIPAA compliance", "Appointment scheduling", "Medical records"],
+    title: "Accounting Portfolio Services",
+    description: "Comprehensive portfolio management solutions for accounting firms with client portfolio tracking, performance analytics, and automated reporting.",
+    category: "Portfolio Management",
+    features: ["Client portfolio tracking", "Performance analytics", "Automated reporting", "Risk assessment", "Compliance monitoring"],
     pricing: {
       starting: "1200",
       currency: "USD"
     },
     deliveryTime: "4-6 weeks",
-    technologies: ["React", "Node.js", "PostgreSQL", "AWS"]
+    technologies: ["React", "Express", "PostgreSQL", "Chart.js", "Risk APIs"]
+  },
+  {
+    id: "medical-portfolio",
+    icon: <Heart className="w-8 h-8" />,
+    title: "HIPAA Consulting Services",
+    description: "MedTech HIPAA Consulting Services",
+    category: "Healthcare Portfolio",
+    features: ["HIPAA compliance", "Security and Privacy", "Compliance Audit", "Risk Assessment", "Training and Awareness"],
+    pricing: {
+      starting: "1500",
+      currency: "USD"
+    },
+    deliveryTime: "5-7 weeks",
+    technologies: ["React", "Node.js", "PostgreSQL", "AWS", "Medical APIs"]
   },
   {
     id: "custom-software",
@@ -85,18 +85,18 @@ export const mockServicesResponse: Service[] = [
     technologies: ["React", "Next.js", "TypeScript", "PostgreSQL"]
   },
   {
-    id: "inventory-management",
+    id: "store-digitization",
     icon: <Package className="w-8 h-8" />,
-    title: "Inventory Management",
-    description: "Streamline your inventory processes with intelligent tracking, automated reordering, and analytics.",
-    category: "Operations",
-    features: ["Real-time tracking", "Automated alerts", "Analytics dashboard", "Barcode scanning"],
+    title: "Store Digitization",
+    description: "Transform your physical store into a digital-first experience with smart inventory systems, digital payments, and customer analytics.",
+    category: "Digital Transformation",
+    features: ["Digital inventory systems", "Smart checkout solutions", "Customer analytics", "Mobile app integration", "Real-time reporting"],
     pricing: {
-      starting: "700",
+      starting: "1000",
       currency: "USD"
     },
-    deliveryTime: "3-5 weeks",
-    technologies: ["React", "Node.js", "MongoDB", "IoT Integration"]
+    deliveryTime: "4-6 weeks",
+    technologies: ["React", "Node.js", "MongoDB", "IoT Integration", "Payment APIs"]
   },
   {
     id: "flutter-development",

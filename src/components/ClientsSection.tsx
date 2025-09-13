@@ -122,8 +122,8 @@ const ClientsSection = () => {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 md:gap-8 text-center">
               {[
                 { number: "100%", label: "Client Satisfaction" },
-                { number: "50+", label: "Projects Completed" },
-                { number: "12+", label: "Industries Served" },
+                { number: "5", label: "Projects Completed" },
+                { number: "4", label: "Happy Clients" },
                 { number: "24/7", label: "Support Available" }
               ].map((stat, index) => (
                 <div key={stat.label}>

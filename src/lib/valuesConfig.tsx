@@ -10,7 +10,7 @@ export const mockApiResponse: CompanyStats = {
   projectsDelivered: 5,
   happyClients: 4,
   globalOffices: 4,
-  yearsExperience: 1,
+  yearsExperience: 12,
 };
 
 // Mock API function to simulate data fetching

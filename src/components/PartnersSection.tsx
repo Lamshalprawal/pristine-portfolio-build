@@ -13,7 +13,7 @@ const PartnersSection = () => {
     {
       name: "Inatale",
       location: "Nepal", 
-      description: "Innovative software company focused on cutting-edge web applications and mobile development solutions.",
+      description: "Innovative Business Development and Legal Advisory Services.",
       icon: <Globe className="w-8 h-8" />,
       expertise: ["Web Development", "Mobile Apps", "UI/UX Design"]
     }

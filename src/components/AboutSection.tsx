@@ -61,8 +61,8 @@ const AboutSection = () => {
         <div className="glass-card rounded-3xl p-6 sm:p-8 md:p-12">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
             {[
-              { number: "50+", label: "Projects Delivered" },
-              { number: "20+", label: "Happy Clients" },
+              { number: "5", label: "Projects Delivered" },
+              { number: "4", label: "Happy Clients" },
               { number: "4", label: "Global Offices" },
               { number: "12+", label: "Years Experience" }
             ].map((stat, index) => (

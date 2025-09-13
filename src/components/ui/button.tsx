@@ -20,6 +20,7 @@ const buttonVariants = cva(
         link: "text-primary underline-offset-4 hover:underline",
         hero: "primary-gradient text-primary-foreground hover:shadow-glow transform hover:scale-105 shadow-elevation animate-glow",
         glass: "glass-card text-foreground hover:bg-card/90 border border-border/30",
+        glassCapsule: "glass-surface--capsule text-foreground hover:bg-white/10 border border-white/20 backdrop-blur-xl",
       },
       size: {
         default: "h-12 px-6 py-3 min-h-[44px]",

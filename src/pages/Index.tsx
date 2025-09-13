@@ -7,10 +7,14 @@ import ServicesSection from "@/components/ServicesSection";
 import ClientsSection from "@/components/ClientsSection";
 import PartnersSection from "@/components/PartnersSection";
 import ContactSection from "@/components/ContactSection";
+import ScrollProgress from "@/components/ScrollProgress";
+import SmoothScroll from "@/components/SmoothScroll";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SmoothScroll />
+      <ScrollProgress />
       <Navigation />
       <HeroSection />
       <PartnersLogoLoop />

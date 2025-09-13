@@ -40,6 +40,13 @@ const ContactSection = () => {
       description: "Quick response guaranteed",
       contact: "24/7 Support",
       href: null
+    },
+    {
+      icon: <Phone className="w-8 h-8" />,
+      title: "Call Us",
+      description: "Get in touch for project inquiries",
+      contact: "+1 9705991750",
+      href: "tel:+19705991750"
     }
   ];
 
