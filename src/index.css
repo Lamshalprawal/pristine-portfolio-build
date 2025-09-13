@@ -206,4 +206,46 @@ All colors MUST be HSL.
       transform: translateY(0);
     }
   }
+
+  /* Mobile-specific improvements */
+  @media (max-width: 768px) {
+    /* Improve touch targets */
+    button, a, [role="button"] {
+      min-height: 44px;
+      min-width: 44px;
+    }
+
+    /* Better mobile spacing */
+    .mobile-padding {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+
+    /* Prevent horizontal scroll */
+    body {
+      overflow-x: hidden;
+    }
+
+    /* Improve text readability on mobile */
+    .mobile-text {
+      font-size: 0.875rem;
+      line-height: 1.5;
+    }
+
+    /* Better mobile card spacing */
+    .mobile-card {
+      margin-bottom: 1rem;
+    }
+  }
+
+  /* Improve mobile navigation */
+  @media (max-width: 768px) {
+    .mobile-nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 50;
+    }
+  }
 }

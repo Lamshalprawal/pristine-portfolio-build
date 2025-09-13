@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Sparkles } from "lucide-react";
-import heroBackground from "@/assets/hero-bg.jpg";
+import { ArrowRight } from "lucide-react";
+import LetterGlitch from "./LetterGlitch";
 
 const HeroSection = () => {
   const scrollToSection = (sectionId: string) => {
@@ -13,49 +13,45 @@ const HeroSection = () => {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
-      style={{
-        backgroundImage: `url(${heroBackground})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundAttachment: "fixed"
-      }}
+      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16"
     >
+      {/* LetterGlitch Background */}
+      <div className="absolute inset-0">
+        <LetterGlitch
+          glitchColors={['#2b4539', '#61dca3', '#61b3dc', '#ffffff', '#000000']}
+          glitchSpeed={80}
+          centerVignette={false}
+          outerVignette={true}
+          smooth={true}
+          characters="ABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$&*()-_+=/[]{};:<>.,0123456789"
+        />
+      </div>
+      
       {/* Overlay */}
       <div className="absolute inset-0 hero-gradient opacity-90" />
       
-      {/* Floating elements */}
-      <div className="absolute top-20 left-10 animate-float opacity-20">
-        <Sparkles className="w-8 h-8 text-primary-glow" />
-      </div>
-      <div className="absolute bottom-32 right-16 animate-float opacity-30" style={{ animationDelay: "2s" }}>
-        <div className="w-4 h-4 bg-primary-glow rounded-full animate-pulse" />
-      </div>
-      <div className="absolute top-1/3 right-10 animate-float opacity-25" style={{ animationDelay: "4s" }}>
-        <div className="w-6 h-6 border-2 border-primary-glow rounded-full" />
-      </div>
 
       {/* Content */}
-      <div className="relative z-10 text-center px-6 lg:px-8 max-w-5xl mx-auto">
+      <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
         <div className="animate-fade-in">
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 leading-tight">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-4 sm:mb-6 leading-tight">
             Transforming Ideas into{" "}
             <span className="primary-gradient bg-clip-text text-transparent">
               Digital Reality
             </span>
           </h1>
           
-          <p className="text-xl md:text-2xl text-white/80 mb-8 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg sm:text-xl md:text-2xl text-white/80 mb-6 sm:mb-8 max-w-3xl mx-auto leading-relaxed px-2">
             Custom software solutions for modern business challenges. 
             Rapidly growing with global presence and 12+ years of expertise.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center px-4">
             <Button
               variant="hero"
-              size="xl"
+              size="lg"
               onClick={() => scrollToSection("services")}
-              className="group"
+              className="group w-full sm:w-auto min-h-[48px]"
             >
               Discover Our Services
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -63,29 +59,33 @@ const HeroSection = () => {
             
             <Button
               variant="glass"
-              size="xl"
+              size="lg"
               onClick={() => scrollToSection("contact")}
+              className="w-full sm:w-auto min-h-[48px]"
             >
               Get in Touch
             </Button>
           </div>
 
-          <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+          <div className="mt-12 sm:mt-16 grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 md:gap-8 max-w-4xl mx-auto px-4">
             {[
               { label: "Founded", value: "2024" },
               { label: "Global Offices", value: "4+" },
-              { label: "Experience", value: "12+ Years" }
+              { label: "Team Experience", value: "12+ Years" }
             ].map((stat, index) => (
               <div
                 key={stat.label}
-                className="glass-card p-6 rounded-2xl animate-scale-in"
+                className="relative group h-32 sm:h-36"
                 style={{ animationDelay: `${index * 0.2}s` }}
               >
-                <div className="text-3xl md:text-4xl font-bold text-white mb-2">
-                  {stat.value}
-                </div>
-                <div className="text-white/70 text-sm uppercase tracking-wide">
-                  {stat.label}
+                <div className="absolute inset-0 primary-gradient rounded-2xl opacity-20 group-hover:opacity-30 transition-opacity duration-300"></div>
+                <div className="relative bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl p-6 hover:bg-white/15 hover:border-white/30 transition-all duration-300 hover:scale-105 hover:shadow-glow h-full flex flex-col justify-center items-center text-center">
+                  <div className="text-3xl sm:text-4xl font-bold text-white mb-2 group-hover:text-primary-glow transition-colors duration-300">
+                    {stat.value}
+                  </div>
+                  <div className="text-white/90 text-sm uppercase tracking-wider font-medium">
+                    {stat.label}
+                  </div>
                 </div>
               </div>
             ))}
